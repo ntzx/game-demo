@@ -14,3 +14,5 @@ while True:
     new_state = sys.stdin.readline().strip()
     if new_state in data:
         state = new_state
+    elif new_state == "" and data[state]["default"] != None:
+        state = data[state]["default"]
